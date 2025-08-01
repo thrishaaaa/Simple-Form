@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>login page</title>
@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<div class="login-page">
+<div class="login-page" >
   <div class="form">
-    <form class="login-form">
-      <input type="text" placeholder="username" required/>
-      <input type="password" placeholder="password" required/>
+    <form class="login-form" method="post" action="/login" th:object="${loginRequest}">
+        <input type="text" th:field="*{username}" placeholder="username" required/>
+        <input type="password" th:field="*{password}" placeholder="password" required/>
       <button>login</button>
       <p class="message">Not registered? <a href="/register">Create an account</a></p>
     </form>
