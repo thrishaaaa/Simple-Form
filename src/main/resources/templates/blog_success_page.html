@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Submitted Successfully</title>
+  <style>
+    body {
+      background-color: #f0fff4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      padding-top: 50px;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 80%;
+      max-width: 700px;
+      text-align: left;
+    }
+
+    h2 {
+      color: #28a745;
+      text-align: center;
+    }
+
+    .username {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .blog-content {
+      margin-top: 20px;
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+
+    a {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Blog Saved Successfully!</h2>
+  <p><span class="username" th:text="${username}">User</span>, here’s your blog:</p>
+
+  <div class="blog-content" th:text="${blogContent}">
+    Your blog content will appear here.
+  </div>
+
+  <a href="/blog">Write Another Blog</a>
+</div>
+</body>
+</html>

@@ -20,6 +20,31 @@ public class UserModel {
 
     String email;
 
+    @Column(name = "blog")
+    private String blog;
+
+    // Getter and Setter
+    public String getBlog() {
+        return blog;
+    }
+
+    public void setBlog(String blog) {
+        this.blog = blog;
+    }
+
+    @Column(name = "journal")
+    private String journal;
+
+    // Getter and Setter
+    public String getJournal() {
+        return journal;
+    }
+
+    public void setJournal(String journal) {
+        this.journal = journal;
+    }
+
+
     public void setId(Integer id) {
         this.id = id;
     }
